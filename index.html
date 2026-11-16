@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bella Brazilian Aesthetic | Estética facial e corporal em Londres</title>
+<meta name="description" content="Estética facial e corporal em Bank, Londres, com Bella Andrade. Botox, bioestimulador, microagulhamento, limpeza de pele, lash lift e massagens. Agende sua avaliação.">
+<meta name="theme-color" content="#6f6d79">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Hanken+Grotesk:wght@300..600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dusk:#6f6d79;      /* mesma cor do fundo da foto principal */
+    --forest:#25302a;
+    --sage:#7e9275;
+    --mist:#e6ebe0;
+    --linen:#f7f6f2;
+    --blush:#ecd3c8;
+    --ink:#232a25;
+    --serif:'Fraunces',Georgia,serif;
+    --sans:'Hanken Grotesk',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:72px}
+  body{font-family:var(--sans);font-weight:400;color:var(--ink);background:var(--linen);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3{font-family:var(--serif);font-weight:300;font-variation-settings:"SOFT" 100;line-height:1.05;letter-spacing:-.01em}
+  a{color:inherit}
+  img{display:block;max-width:100%}
+  :focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+  /* botões */
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border-radius:999px;font:500 1rem var(--sans);text-decoration:none;border:0;cursor:pointer;transition:background .25s,color .25s,transform .25s}
+  .btn:active{transform:scale(.98)}
+  .btn-light{background:var(--linen);color:var(--forest)}
+  .btn-light:hover{background:#fff}
+  .btn-dark{background:var(--forest);color:var(--linen)}
+  .btn-dark:hover{background:#34443a}
+  .link{font-weight:500;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+
+  /* navegação */
+  header{position:fixed;inset:0 0 auto 0;z-index:50;color:var(--linen);transition:background .35s,box-shadow .35s}
+  header.solid{background:var(--forest);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{font-family:var(--serif);font-size:1.6rem;font-weight:400;text-decoration:none;display:flex;align-items:baseline;gap:10px}
+  .brand small{font:400 .8rem var(--sans);opacity:.8}
+  nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+  nav a{text-decoration:none;font-size:.95rem}
+  nav a:hover{text-decoration:underline;text-underline-offset:6px}
+  .lang{background:none;border:1px solid rgba(247,246,242,.55);color:inherit;font:500 .8rem var(--sans);padding:6px 13px;border-radius:99px;cursor:pointer}
+  .menu-btn{display:none;background:none;border:0;color:inherit;font:inherit;font-size:.95rem;cursor:pointer;padding:8px}
+
+  /* hero */
+  .hero{position:relative;background:var(--dusk);color:var(--linen);min-height:100svh;overflow:hidden;display:flex}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);width:100%;max-width:1180px;margin:0 auto;padding:0 28px;align-items:center}
+  .hero-copy{padding:120px 0 90px;position:relative;z-index:3}
+  .hero h1{font-size:clamp(2.7rem,5.6vw,5.4rem);margin-bottom:26px;max-width:11ch;font-weight:300}
+  .hero h1 span{display:block}
+  .hero p.lead{font-size:1.15rem;max-width:30ch;margin-bottom:38px;opacity:.95}
+  .hero .actions{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+  .hero-photo{position:absolute;right:max(0px,calc((100vw - 1180px)/2 - 60px));bottom:0;top:0;width:min(62vw,820px);z-index:1;display:flex;align-items:flex-end;justify-content:center}
+  .hero-photo img{height:min(100svh,1000px);width:auto;max-width:none;object-fit:cover;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 24%,#000 78%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 14%);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to right,transparent 0,#000 24%,#000 78%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 14%);
+    mask-composite:intersect}
+  .hero-foot{position:absolute;z-index:3;left:0;right:0;bottom:0;padding:0 0 26px}
+  .hero-foot .in{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;gap:34px;font-size:.92rem;flex-wrap:wrap}
+  .hero-foot a{text-decoration:none;opacity:.92}
+  .hero-foot a:hover{text-decoration:underline;text-underline-offset:5px}
+
+  /* entrada do topo: único momento animado da página */
+  @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  @keyframes emerge{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:none}}
+  .hero-photo img{animation:emerge 1.6s cubic-bezier(.2,.7,.2,1) both}
+  .hero h1 span,.hero p.lead,.hero .actions{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+  .hero h1 span:nth-child(1){animation-delay:.25s}
+  .hero h1 span:nth-child(2){animation-delay:.4s}
+  .hero h1 span:nth-child(3){animation-delay:.55s}
+  .hero p.lead{animation-delay:.8s}
+  .hero .actions{animation-delay:.95s}
+
+  /* oferta */
+  .offer{background:var(--forest);color:var(--linen);padding:96px 0}
+  .offer-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+  .offer h2{font-size:clamp(2rem,4vw,3.3rem);margin-bottom:12px}
+  .offer .sub{opacity:.85;margin-bottom:26px;max-width:42ch}
+  .offer ul{list-style:none;border-top:1px solid rgba(247,246,242,.2)}
+  .offer li{padding:13px 0;border-bottom:1px solid rgba(247,246,242,.2);font-family:var(--serif);font-size:1.35rem;font-weight:300}
+  .price-box{text-align:left}
+  .price-box .was{font-size:1.15rem;opacity:.7}
+  .price-box .was s{text-decoration-thickness:1px}
+  .price-box .now{font-family:var(--serif);font-weight:300;font-size:clamp(5rem,12vw,9.5rem);line-height:.95;letter-spacing:-.03em;color:var(--blush);font-variation-settings:"SOFT" 100;margin:6px 0 24px}
+  .price-box .now sup{font-size:.4em;vertical-align:top;position:relative;top:.25em;margin-right:4px}
+  .price-box p.tag{font-size:.92rem;opacity:.8;margin-top:14px}
+
+  /* seções */
+  section{padding:104px 0}
+  h2.title{font-size:clamp(2.1rem,4.2vw,3.4rem);margin-bottom:18px}
+
+  /* tratamentos */
+  .treat{background:var(--mist)}
+  .treat-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
+  .treat-intro{position:sticky;top:110px}
+  .treat-intro p{max-width:34ch;margin-bottom:26px}
+  .acc{border-top:1px solid rgba(37,48,42,.25)}
+  .acc-item{border-bottom:1px solid rgba(37,48,42,.25)}
+  .acc-btn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;background:none;border:0;padding:26px 0;cursor:pointer;color:inherit;text-align:left;font-family:var(--serif);font-weight:300;font-size:clamp(1.6rem,3vw,2.3rem);font-variation-settings:"SOFT" 100}
+  .acc-btn i{flex:none;width:34px;height:34px;border:1px solid var(--forest);border-radius:50%;position:relative;transition:background .25s,transform .35s}
+  .acc-btn i::before,.acc-btn i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1px;background:var(--forest);transform:translate(-50%,-50%);transition:background .25s}
+  .acc-btn i::after{transform:translate(-50%,-50%) rotate(90deg)}
+  .acc-item.open .acc-btn i{transform:rotate(45deg);background:var(--forest)}
+  .acc-item.open .acc-btn i::before,.acc-item.open .acc-btn i::after{background:var(--mist)}
+  .acc-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+  .acc-item.open .acc-panel{grid-template-rows:1fr}
+  .acc-panel>div{overflow:hidden}
+  .acc-panel p{max-width:52ch;padding-bottom:12px}
+  .acc-panel a{display:inline-block;margin-bottom:28px}
+
+  /* galeria */
+  .studio{background:var(--linen);padding-bottom:40px}
+  .studio .head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:46px;flex-wrap:wrap}
+  .studio .head p{max-width:38ch}
+  .shots{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:start}
+  .shots figure:nth-child(2){margin-top:56px}
+  .shots figure:nth-child(4){margin-top:28px}
+  .shots img{width:100%;aspect-ratio:3/4;object-fit:cover;background:var(--mist)}
+  .shots figcaption{font-size:.92rem;margin-top:10px}
+
+  /* sobre */
+  .about{background:var(--linen)}
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+  .about-photo img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:2px}
+  .about p{max-width:50ch;margin-bottom:16px;font-size:1.06rem}
+  .facts{margin-top:34px;border-top:1px solid rgba(37,48,42,.25)}
+  .facts div{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:14px 0;border-bottom:1px solid rgba(37,48,42,.25)}
+  .facts dt{font-family:var(--serif);font-size:1.3rem;font-weight:400}
+  .facts dd{align-self:center}
+
+  /* como funciona */
+  .steps-sec{background:var(--mist)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;counter-reset:s}
+  .step{padding:0 34px 0 0;position:relative}
+  .step + .step{padding-left:34px;border-left:1px solid rgba(37,48,42,.25)}
+  .step b{display:block;font-family:var(--serif);font-weight:300;font-size:4.2rem;line-height:1;color:var(--sage);margin-bottom:14px}
+  .step h3{font-size:1.7rem;margin-bottom:8px;font-weight:400}
+  .step p{max-width:30ch}
+
+  /* contato */
+  .contact{background:var(--forest);color:var(--linen)}
+  .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}
+  .contact h2{font-size:clamp(2.1rem,4.4vw,3.6rem);margin-bottom:20px;max-width:14ch}
+  .contact p.intro{max-width:38ch;opacity:.9;margin-bottom:34px}
+  .contact dl{margin-top:44px;border-top:1px solid rgba(247,246,242,.2)}
+  .contact dl div{display:grid;grid-template-columns:120px 1fr;padding:14px 0;border-bottom:1px solid rgba(247,246,242,.2)}
+  .contact dt{opacity:.7}
+  .contact dd a{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+  .contact-photo img{width:100%;height:auto;aspect-ratio:6/5;object-fit:cover;object-position:50% 0;border-radius:2px}
+
+  footer{background:#1b241e;color:rgba(247,246,242,.7);padding:26px 0;font-size:.88rem}
+  footer .in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+  .sticky-cta{display:none}
+
+  @media(max-width:900px){
+    .nav{height:64px}
+    html{scroll-padding-top:64px}
+    .menu-btn{display:block}
+    nav ul{display:none;position:absolute;top:64px;left:0;right:0;background:var(--forest);flex-direction:column;align-items:flex-start;padding:22px 28px 26px;gap:18px}
+    nav ul.open{display:flex}
+    .brand small{display:none}
+    .hero{min-height:auto;display:flex;flex-direction:column}
+    .hero-grid{grid-template-columns:1fr;padding:0 24px;order:1}
+    .hero-copy{padding:104px 0 28px}
+    .hero h1{font-size:clamp(2.5rem,11vw,3.4rem)}
+    .hero-photo{position:relative;right:auto;top:auto;bottom:auto;width:100%;height:auto;margin-top:-10px;justify-content:center;order:2}
+    .hero-photo img{height:auto;width:min(100%,520px);max-height:none;
+      -webkit-mask-image:linear-gradient(to right,transparent 0,#000 18%,#000 82%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 22%);
+      mask-image:linear-gradient(to right,transparent 0,#000 18%,#000 82%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 22%)}
+    .hero-foot{display:none}
+    .offer{padding:72px 0}
+    .offer-grid,.treat-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+    .treat-intro{position:static}
+    section{padding:72px 0}
+    .shots{grid-template-columns:repeat(2,1fr);gap:14px}
+    .shots figure:nth-child(2),.shots figure:nth-child(4){margin-top:0}
+    .shots figure:nth-child(even){margin-top:30px}
+    .about-photo{max-width:440px}
+    .facts div{grid-template-columns:110px 1fr}
+    .steps{grid-template-columns:1fr;gap:34px}
+    .step,.step + .step{padding:0;border:0}
+    .contact dl div{grid-template-columns:100px 1fr}
+    body{padding-bottom:76px}
+    .sticky-cta{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:60;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{animation:none!important;transition:none!important}
+  }
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand">Bella <small>Brazilian Aesthetic</small></a>
+    <nav aria-label="Principal">
+      <ul id="menu">
+        <li><a href="#tratamentos" data-pt="Tratamentos" data-en="Treatments">Tratamentos</a></li>
+        <li><a href="#oferta" data-pt="Oferta" data-en="Offer">Oferta</a></li>
+        <li><a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a></li>
+        <li><a href="#contato" data-pt="Contato" data-en="Contact">Contato</a></li>
+        <li><button class="lang" id="lang" type="button" aria-label="Mudar idioma / Change language">English</button></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" id="mbtn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-photo">
+      <img src="img/hero.jpg" alt="Bella Andrade, esteticista, sentada em estúdio" width="900" height="1103">
+    </div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1 data-pt="<span>Transformando</span><span>seu bem-estar</span><span>através da estética.</span>" data-en="<span>Transforming</span><span>your well-being</span><span>through aesthetics.</span>"><span>Transformando</span><span>seu bem-estar</span><span>através da estética.</span></h1>
+        <p class="lead" data-pt="Cuidados faciais e corporais no coração de Londres, com atendimento da Bella." data-en="Facial and body care in the heart of London, with Bella.">Cuidados faciais e corporais no coração de Londres, com atendimento da Bella.</p>
+        <div class="actions">
+          <a class="btn btn-light" href="https://wa.me/447706729897" target="_blank" rel="noopener" data-pt="Agendar avaliação" data-en="Book a consultation">Agendar avaliação</a>
+          <a class="link" href="#tratamentos" data-pt="Ver tratamentos" data-en="See treatments">Ver tratamentos</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-foot"><div class="in">
+      <span>Bank, London EC4R 2SU</span>
+      <a href="https://www.instagram.com/bellaaestheticbeb/" target="_blank" rel="noopener">@bellaaestheticbeb</a>
+    </div></div>
+  </div>
+
+  <!-- OFERTA -->
+  <div class="offer" id="oferta">
+    <div class="wrap offer-grid">
+      <div>
+        <h2 data-pt="Black November: pele de seda no final de ano" data-en="Black November: silky skin for the end of the year">Black November: pele de seda no final de ano</h2>
+        <p class="sub" data-pt="Três tratamentos combinados em um único pacote." data-en="Three treatments combined in a single package.">Três tratamentos combinados em um único pacote.</p>
+        <ul>
+          <li>Botox</li>
+          <li data-pt="Bioestimulador" data-en="Biostimulator">Bioestimulador</li>
+          <li data-pt="Microagulhamento" data-en="Microneedling">Microagulhamento</li>
+        </ul>
+      </div>
+      <div class="price-box">
+        <div class="was" data-pt="De <s>£480</s> por" data-en="From <s>£480</s> for">De <s>£480</s> por</div>
+        <div class="now"><sup>£</sup>400</div>
+        <a class="btn btn-light" href="https://wa.me/447706729897?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20oferta%20Black%20November." target="_blank" rel="noopener" data-pt="Agendar avaliação" data-en="Book a consultation">Agendar avaliação</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRATAMENTOS -->
+  <section class="treat" id="tratamentos">
+    <div class="wrap treat-grid">
+      <div class="treat-intro">
+        <h2 class="title" data-pt="Tratamentos para rosto e corpo" data-en="Treatments for face and body">Tratamentos para rosto e corpo</h2>
+        <p data-pt="Todo protocolo começa com uma avaliação da sua pele, para indicar só o que faz sentido para você." data-en="Every protocol starts with an assessment of your skin, so I only recommend what makes sense for you.">Todo protocolo começa com uma avaliação da sua pele, para indicar só o que faz sentido para você.</p>
+        <a class="btn btn-dark" href="https://wa.me/447706729897" target="_blank" rel="noopener" data-pt="Agendar avaliação" data-en="Book a consultation">Agendar avaliação</a>
+      </div>
+      <div class="acc" id="acc">
+        <div class="acc-item open">
+          <button class="acc-btn" type="button" aria-expanded="true"><span>Botox</span><i aria-hidden="true"></i></button>
+          <div class="acc-panel"><div>
+            <p data-pt="Suaviza linhas de expressão com resultado natural, mantendo a sua identidade." data-en="Softens expression lines with a natural result that keeps your identity.">Suaviza linhas de expressão com resultado natural, mantendo a sua identidade.</p>
+            <a class="link" href="https://wa.me/447706729897?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Botox." target="_blank" rel="noopener" data-pt="Perguntar sobre Botox" data-en="Ask about Botox">Perguntar sobre Botox</a>
+          </div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-btn" type="button" aria-expanded="false"><span data-pt="Bioestimulador" data-en="Biostimulator">Bioestimulador</span><i aria-hidden="true"></i></button>
+          <div class="acc-panel"><div>
+            <p data-pt="Estimula a produção de colágeno para dar firmeza e melhorar a qualidade da pele ao longo do tempo." data-en="Stimulates collagen production to add firmness and improve skin quality over time.">Estimula a produção de colágeno para dar firmeza e melhorar a qualidade da pele ao longo do tempo.</p>
+            <a class="link" href="https://wa.me/447706729897?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Bioestimulador." target="_blank" rel="noopener" data-pt="Perguntar sobre bioestimulador" data-en="Ask about the biostimulator">Perguntar sobre bioestimulador</a>
+          </div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-btn" type="button" aria-expanded="false"><span data-pt="Microagulhamento" data-en="Microneedling">Microagulhamento</span><i aria-hidden="true"></i></button>
+          <div class="acc-panel"><div>
+            <p data-pt="Renova a textura da pele, uniformiza o tom e melhora a aparência de poros e cicatrizes." data-en="Renews skin texture, evens tone and improves the look of pores and scars.">Renova a textura da pele, uniformiza o tom e melhora a aparência de poros e cicatrizes.</p>
+            <a class="link" href="https://wa.me/447706729897?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Microagulhamento." target="_blank" rel="noopener" data-pt="Perguntar sobre microagulhamento" data-en="Ask about microneedling">Perguntar sobre microagulhamento</a>
+          </div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-btn" type="button" aria-expanded="false"><span data-pt="Limpeza de pele" data-en="Skin cleansing">Limpeza de pele</span><i aria-hidden="true"></i></button>
+          <div class="acc-panel"><div>
+            <p data-pt="Limpeza profunda que desobstrui os poros e devolve viço e luminosidade." data-en="Deep cleansing that clears pores and restores radiance.">Limpeza profunda que desobstrui os poros e devolve viço e luminosidade.</p>
+            <a class="link" href="https://wa.me/447706729897?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Limpeza%20de%20pele." target="_blank" rel="noopener" data-pt="Perguntar sobre limpeza de pele" data-en="Ask about skin cleansing">Perguntar sobre limpeza de pele</a>
+          </div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-btn" type="button" aria-expanded="false"><span>Lash lift</span><i aria-hidden="true"></i></button>
+          <div class="acc-panel"><div>
+            <p data-pt="Cílios curvados e alongados por semanas, sem precisar de extensão." data-en="Curled, lifted lashes for weeks, with no extensions needed.">Cílios curvados e alongados por semanas, sem precisar de extensão.</p>
+            <a class="link" href="https://wa.me/447706729897?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Lash%20lift." target="_blank" rel="noopener" data-pt="Perguntar sobre lash lift" data-en="Ask about lash lift">Perguntar sobre lash lift</a>
+          </div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-btn" type="button" aria-expanded="false"><span data-pt="Massagens" data-en="Massages">Massagens</span><i aria-hidden="true"></i></button>
+          <div class="acc-panel"><div>
+            <p data-pt="Massagens relaxantes, incluindo com pedras quentes, para aliviar a tensão do dia a dia." data-en="Relaxing massages, including hot stones, to ease everyday tension.">Massagens relaxantes, incluindo com pedras quentes, para aliviar a tensão do dia a dia.</p>
+            <a class="link" href="https://wa.me/447706729897?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20Massagens." target="_blank" rel="noopener" data-pt="Perguntar sobre massagens" data-en="Ask about massages">Perguntar sobre massagens</a>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTÚDIO -->
+  <section class="studio">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="title" style="margin:0" data-pt="Dentro do estúdio" data-en="Inside the studio">Dentro do estúdio</h2>
+        <p data-pt="Um espaço calmo e limpo, pensado para você relaxar durante o atendimento." data-en="A calm, clean space designed for you to relax during your appointment.">Um espaço calmo e limpo, pensado para você relaxar durante o atendimento.</p>
+      </div>
+      <div class="shots">
+        <figure><img src="img/lash.jpg" alt="Olho com lash lift e sobrancelha desenhada" loading="lazy"><figcaption>Lash lift</figcaption></figure>
+        <figure><img src="img/pele.jpg" alt="Cliente deitada antes do tratamento facial" loading="lazy"><figcaption data-pt="Cuidado facial" data-en="Facial care">Cuidado facial</figcaption></figure>
+        <figure><img src="img/vapor.jpg" alt="Vapor e luz de aumento durante tratamento facial" loading="lazy"><figcaption data-pt="Vapor e preparo da pele" data-en="Steam and skin prep">Vapor e preparo da pele</figcaption></figure>
+        <figure><img src="img/olhos.jpg" alt="Cliente relaxando com patches gelados nos olhos" loading="lazy"><figcaption data-pt="Momento de relaxamento" data-en="Time to relax">Momento de relaxamento</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about" id="sobre">
+    <div class="wrap about-grid">
+      <div class="about-photo"><img src="img/sobre.jpg" alt="Bella Andrade sorrindo" width="900" height="1170" loading="lazy"></div>
+      <div>
+        <h2 class="title">Bella Andrade</h2>
+        <p data-pt="Nasci em Goiânia e moro em Londres há cinco anos. Trabalho com estética há seis, e minha base inclui graduação em Administração e NVQ em beleza e estética." data-en="I was born in Goiânia and have lived in London for five years. I have worked in aesthetics for six, with a degree in Business Administration and an NVQ in beauty and aesthetics.">Nasci em Goiânia e moro em Londres há cinco anos. Trabalho com estética há seis, e minha base inclui graduação em Administração e NVQ em beleza e estética.</p>
+        <p data-pt="Cuido da pele no ritmo de cada pessoa. Quero que você saia do estúdio bem consigo mesma e se reconhecendo no espelho." data-en="I care for skin at each person's own pace. I want you to leave the studio feeling good and recognising yourself in the mirror.">Cuido da pele no ritmo de cada pessoa. Quero que você saia do estúdio bem consigo mesma e se reconhecendo no espelho.</p>
+        <dl class="facts">
+          <div><dt data-pt="6 anos" data-en="6 years">6 anos</dt><dd data-pt="trabalhando com estética" data-en="working in aesthetics">trabalhando com estética</dd></div>
+          <div><dt data-pt="5 anos" data-en="5 years">5 anos</dt><dd data-pt="morando em Londres" data-en="living in London">morando em Londres</dd></div>
+          <div><dt>NVQ</dt><dd data-pt="em beleza e estética" data-en="in beauty and aesthetics">em beleza e estética</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="steps-sec">
+    <div class="wrap">
+      <h2 class="title" data-pt="Como funciona" data-en="How it works">Como funciona</h2>
+      <div class="steps">
+        <div class="step"><b>1</b><h3 data-pt="Você chama no WhatsApp" data-en="Message on WhatsApp">Você chama no WhatsApp</h3><p data-pt="Conte o que você quer melhorar e escolha um horário." data-en="Tell me what you want to improve and pick a time.">Conte o que você quer melhorar e escolha um horário.</p></div>
+        <div class="step"><b>2</b><h3 data-pt="Avaliação da pele" data-en="Skin assessment">Avaliação da pele</h3><p data-pt="Analiso a sua pele e indico o protocolo certo para o seu caso." data-en="I assess your skin and recommend the right protocol for you.">Analiso a sua pele e indico o protocolo certo para o seu caso.</p></div>
+        <div class="step"><b>3</b><h3 data-pt="Tratamento" data-en="Treatment">Tratamento</h3><p data-pt="Atendimento com calma e técnica, em Bank, Londres." data-en="Calm, skilled care in Bank, London.">Atendimento com calma e técnica, em Bank, Londres.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contact" id="contato">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 data-pt="Vamos conversar sobre a sua pele" data-en="Let's talk about your skin">Vamos conversar sobre a sua pele</h2>
+        <p class="intro" data-pt="Mande uma mensagem e agende a sua avaliação." data-en="Send a message and book your consultation.">Mande uma mensagem e agende a sua avaliação.</p>
+        <a class="btn btn-light" href="https://wa.me/447706729897" target="_blank" rel="noopener" data-pt="Chamar no WhatsApp" data-en="Message on WhatsApp">Chamar no WhatsApp</a>
+        <dl>
+          <div><dt data-pt="Endereço" data-en="Address">Endereço</dt><dd>Bank, London EC4R 2SU</dd></div>
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/447706729897" target="_blank" rel="noopener">+44 7706 729897</a></dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/bellaaestheticbeb/" target="_blank" rel="noopener">@bellaaestheticbeb</a></dd></div>
+        </dl>
+      </div>
+      <div class="contact-photo"><img src="img/janela.jpg" alt="Bella Andrade sentada perto de uma janela em Londres" width="1077" height="1400" loading="lazy"></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap in"><span>© <span id="y"></span> Bella Brazilian Aesthetic</span><span>Bank, London</span></div></footer>
+
+<a class="btn btn-dark sticky-cta" href="https://wa.me/447706729897" target="_blank" rel="noopener" data-pt="Agendar pelo WhatsApp" data-en="Book on WhatsApp">Agendar pelo WhatsApp</a>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // cabeçalho sólido depois do topo
+  var hdr = document.getElementById('hdr');
+  function onScroll(){ hdr.classList.toggle('solid', window.scrollY > 40); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // menu mobile
+  var mbtn = document.getElementById('mbtn'), menu = document.getElementById('menu');
+  mbtn.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    mbtn.setAttribute('aria-expanded', open);
+    if(open) hdr.classList.add('solid'); else onScroll();
+  });
+  menu.addEventListener('click', function(e){ if(e.target.tagName==='A'){ menu.classList.remove('open'); mbtn.setAttribute('aria-expanded', false); onScroll(); } });
+
+  // acordeão dos tratamentos
+  document.querySelectorAll('.acc-btn').forEach(function(b){
+    b.addEventListener('click', function(){
+      var item = b.parentElement, open = item.classList.toggle('open');
+      b.setAttribute('aria-expanded', open);
+    });
+  });
+
+  // idioma
+  var cur = 'pt', lang = document.getElementById('lang');
+  lang.addEventListener('click', function(){
+    cur = cur === 'pt' ? 'en' : 'pt';
+    document.documentElement.lang = cur === 'pt' ? 'pt-BR' : 'en';
+    document.querySelectorAll('[data-pt]').forEach(function(el){ el.innerHTML = el.getAttribute('data-' + cur); });
+    lang.textContent = cur === 'pt' ? 'English' : 'Português';
+  });
+</script>
+</body>
+</html>
