@@ -6,6 +6,7 @@
 <title>Bella Brazilian Aesthetic | Estética facial e corporal em Londres</title>
 <meta name="description" content="Estética facial e corporal em Bank, Londres, com Bella Andrade. Botox, bioestimulador, microagulhamento, limpeza de pele, lash lift e massagens. Agende sua avaliação.">
 <meta name="theme-color" content="#6f6d79">
+<link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Hanken+Grotesk:wght@300..600&display=swap" rel="stylesheet">
@@ -44,6 +45,9 @@
   header.solid{background:var(--forest);box-shadow:0 1px 0 rgba(255,255,255,.08)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
   .brand{font-family:var(--serif);font-size:1.6rem;font-weight:400;text-decoration:none;display:flex;align-items:baseline;gap:10px}
+  .brand{gap:12px;align-items:center}
+  .brand img{height:48px;width:auto}
+  .brand span{display:flex;align-items:baseline;gap:10px}
   .brand small{font:400 .8rem var(--sans);opacity:.8}
   nav ul{display:flex;gap:30px;list-style:none;align-items:center}
   nav a{text-decoration:none;font-size:.95rem}
@@ -159,7 +163,9 @@
   .contact-photo img{width:100%;height:auto;aspect-ratio:6/5;object-fit:cover;object-position:50% 0;border-radius:2px}
 
   footer{background:#1b241e;color:rgba(247,246,242,.7);padding:26px 0;font-size:.88rem}
-  footer .in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer{padding:54px 0 26px}
+  .foot-logo{height:120px;width:auto;margin:0 auto 38px}
+  footer .in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid rgba(247,246,242,.15);padding-top:22px}
 
   .sticky-cta{display:none}
 
@@ -204,7 +210,7 @@
 
 <header id="hdr">
   <div class="wrap nav">
-    <a href="#top" class="brand">Bella <small>Brazilian Aesthetic</small></a>
+    <a href="#top" class="brand" aria-label="Bella Brazilian Aesthetic, início"><img src="img/logo-mark.png" alt="" width="260" height="273"><span>Bella <small>Brazilian Aesthetic</small></span></a>
     <nav aria-label="Principal">
       <ul id="menu">
         <li><a href="#tratamentos" data-pt="Tratamentos" data-en="Treatments">Tratamentos</a></li>
@@ -379,7 +385,7 @@
   </section>
 </main>
 
-<footer><div class="wrap in"><span>© <span id="y"></span> Bella Brazilian Aesthetic</span> <span>Bank, London</span></div></footer>
+<footer><div class="wrap"><img class="foot-logo" src="img/logo-full.png" alt="BEB, Bella Brazilian Aesthetic" width="300" height="431" loading="lazy"><div class="in"><span>© <span id="y"></span> Bella Brazilian Aesthetic</span><span>Bank, London</span></div></div></footer>
 
 <a class="btn btn-dark sticky-cta" href="https://wa.me/447706729897" target="_blank" rel="noopener" data-pt="Agendar pelo WhatsApp" data-en="Book on WhatsApp">Agendar pelo WhatsApp</a>
 
